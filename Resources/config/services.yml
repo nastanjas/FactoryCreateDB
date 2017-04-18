@@ -1,0 +1,9 @@
+services:
+    feedify.db_customer_factory:
+        class:      Feedify\BaseBundle\Service\Management\Contracts\UserDbFactory
+        arguments:
+            - "@doctrine.orm.customer_entity_manager"
+            - "@doctrine.orm.default_entity_manager"
+            - "@doctrine.dbal.customer_connection"
+            - "@doctrine.dbal.default_connection"
+            - "@doctrine"
